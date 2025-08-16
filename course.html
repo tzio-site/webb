@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Tags Tutorial</title>
+  <link rel="stylesheet" href="course.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+     <a href="#" class="brand-logo">
+      <div class="logo">
+        <img src="LOGO.png" alt="My Website Logo">
+      </div>
+    </a>
+
+     <form class="search-form" role="search" aria-label="Site search">
+    <label for="site-search" class="visually-hidden">Search</label>
+    <div class="search-input-wrapper">
+      <input type="search" id="site-search" name="q" placeholder="Search…" aria-label="Search" />
+      <button type="submit" aria-label="Submit search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </div>
+  </form>
+
+    <nav class="navbar">
+      <ul>
+        <li><a href="home.html" >Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="course.html"class="active">Courses</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="library.html">Resourses</a></li>
+        <li><a href="stream.html" >Stream</a></li>
+     
+      </ul>
+    </nav>
+  </header>
+
+  <section class="tutorial">
+    <h2>HTML Tags Tutorial</h2>
+    
+    <p>HTML provides the structural foundation for web pages. Below are some essential HTML tags with examples:</p>
+    
+    <div class="tag-section">
+      <div class="tag-card">
+        <h3><code>&lt;header&gt;</code> Tag</h3>
+        <p class="tag-description">
+          The <code>&lt;header&gt;</code> element represents introductory content, typically containing 
+          navigation links, logos, or heading elements. It's commonly used at the top of a webpage 
+          or section.
+        </p>
+        <button class="tag-btn" onclick="toggleExample('header-example')">Show Example</button>
+        <div id="header-example" class="example-box">
+&lt;header&gt;
+  &lt;h1&gt;Website Title&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+        </div>
+      </div>
+      
+      <div class="tag-card">
+        <h3><code>&lt;link&gt;</code> Tag</h3>
+        <p class="tag-description">
+          The <code>&lt;link&gt;</code> element specifies relationships between the current document 
+          and external resources. It's most commonly used to link CSS stylesheets, but can also 
+          link icons, alternative versions of the page, and more.
+        </p>
+        <button class="tag-btn" onclick="toggleExample('link-example')">Show Example</button>
+        <div id="link-example" class="example-box">
+&lt;!-- Link to a CSS stylesheet --&gt;
+&lt;link rel="stylesheet" href="styles.css"&gt;
+
+&lt;!-- Link to a favicon --&gt;
+&lt;link rel="icon" type="image/png" href="favicon.png"&gt;
+
+&lt;!-- Link to a preload resource --&gt;
+&lt;link rel="preload" href="font.woff2" as="font" type="font/woff2" crossorigin&gt;
+        </div>
+      </div>
+      
+      <div class="tag-card">
+        <h3><code>&lt;div&gt;</code> Tag</h3>
+        <p class="tag-description">
+          The <code>&lt;div&gt;</code> is a generic container for flow content. It has no effect on 
+          the content or layout until styled with CSS. Divs are commonly used to group elements 
+          for styling purposes or as hook points for JavaScript.
+        </p>
+        <button class="tag-btn" onclick="toggleExample('div-example')">Show Example</button>
+        <div id="div-example" class="example-box">
+&lt;div class="card-container"&gt;
+  &lt;div class="card"&gt;
+    &lt;h3&gt;Card Title&lt;/h3&gt;
+    &lt;p&gt;This is a card component created using div elements.&lt;/p&gt;
+  &lt;/div&gt;
+  
+  &lt;div class="card"&gt;
+    &lt;h3&gt;Another Card&lt;/h3&gt;
+    &lt;p&gt;Divs help organize content into logical sections.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+        </div>
+      </div>
+    </div>
+
+      <div class="tag-card">
+        <h3><code>&lt;section&gt;</code> Tag</h3>
+        <p class="tag-description">
+          The <code>&lt;section&gt;</code> element represents a thematic grouping of content, 
+          typically with a heading. It should make sense on its own when separated from the rest of the page.
+        </p>
+        <button class="tag-btn" onclick="toggleExample('section-example')">Show Example</button>
+        <div id="section-example" class="example-box">
+&lt;section&gt;
+  &lt;h2&gt;About Us&lt;/h2&gt;
+  &lt;p&gt;We are a company dedicated to web development.&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;h2&gt;Our Services&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Web Design&lt;/li&gt;
+    &lt;li&gt;Frontend Development&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/section&gt;
+        </div>
+      </div>
+
+      <div class="tag-card">
+        <h3><code>&lt;article&gt;</code> Tag</h3>
+        <p class="tag-description">
+          The <code>&lt;article&gt;</code> element represents a self-contained composition that is 
+          independently distributable or reusable (e.g., blog post, news story).
+        </p>
+        <button class="tag-btn" onclick="toggleExample('article-example')">Show Example</button>
+        <div id="article-example" class="example-box">
+&lt;article&gt;
+  &lt;h2&gt;How to Learn HTML&lt;/h2&gt;
+  &lt;p&gt;HTML is the foundation of web development...&lt;/p&gt;
+  &lt;footer&gt;
+    &lt;p&gt;Posted on &lt;time datetime="2023-05-15"&gt;May 15&lt;/time&gt; by Author&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/article&gt;
+        </div>
+      </div>
+
+      <div class="tag-card">
+        <h3><code>&lt;nav&gt;</code> Tag</h3>
+        <p class="tag-description">
+          The <code>&lt;nav&gt;</code> element represents a section of a page whose purpose is 
+          to provide navigation links, either within the current document or to other documents.
+        </p>
+        <button class="tag-btn" onclick="toggleExample('nav-example')">Show Example</button>
+        <div id="nav-example" class="example-box">
+&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="/home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+        </div>
+      </div>
+
+      <div class="tag-card">
+        <h3><code>&lt;form&gt;</code> Tag</h3>
+        <p class="tag-description">
+          The <code>&lt;form&gt;</code> element represents a document section containing interactive 
+          controls for submitting information to a web server.
+        </p>
+        <button class="tag-btn" onclick="toggleExample('form-example')">Show Example</button>
+        <div id="form-example" class="example-box">
+&lt;form action="/submit" method="post"&gt;
+  &lt;label for="name"&gt;Name:&lt;/label&gt;
+  &lt;input type="text" id="name" name="name" required&gt;
+  
+  &lt;label for="email"&gt;Email:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email" required&gt;
+  
+  &lt;label for="message"&gt;Message:&lt;/label&gt;
+  &lt;textarea id="message" name="message"&gt;&lt;/textarea&gt;
+  
+  &lt;button type="submit"&gt;Send&lt;/button&gt;
+&lt;/form&gt;
+        </div>
+      </div>
+
+      <div class="tag-card">
+        <h3><code>&lt;table&gt;</code> Tag</h3>
+        <p class="tag-description">
+          The <code>&lt;table&gt;</code> element represents tabular data — information presented 
+          in a two-dimensional table comprised of rows and columns of cells containing data.
+        </p>
+        <button class="tag-btn" onclick="toggleExample('table-example')">Show Example</button>
+        <div id="table-example" class="example-box">
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Age&lt;/th&gt;
+      &lt;th&gt;Occupation&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;John Doe&lt;/td&gt;
+      &lt;td&gt;28&lt;/td&gt;
+      &lt;td&gt;Web Developer&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Jane Smith&lt;/td&gt;
+      &lt;td&gt;32&lt;/td&gt;
+      &lt;td&gt;UX Designer&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+        </div>
+      </div>
+
+      <div class="tag-card">
+        <h3><code>&lt;video&gt;</code> Tag</h3>
+        <p class="tag-description">
+          The <code>&lt;video&gt;</code> element embeds a media player which supports video playback 
+          into the document. You can specify multiple sources for browser compatibility.
+        </p>
+        <button class="tag-btn" onclick="toggleExample('video-example')">Show Example</button>
+        <div id="video-example" class="example-box">
+&lt;video width="320" height="240" controls&gt;
+  &lt;source src="movie.mp4" type="video/mp4"&gt;
+  &lt;source src="movie.ogg" type="video/ogg"&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;
+        </div>
+      </div>
+
+      <div class="tag-card">
+        <h3><code>&lt;audio&gt;</code> Tag</h3>
+        <p class="tag-description">
+          The <code>&lt;audio&gt;</code> element embeds sound content in documents. It may contain 
+          one or more audio sources, represented using the src attribute or the <code>&lt;source&gt;</code> element.
+        </p>
+        <button class="tag-btn" onclick="toggleExample('audio-example')">Show Example</button>
+        <div id="audio-example" class="example-box">
+&lt;audio controls&gt;
+  &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+  &lt;source src="audio.ogg" type="audio/ogg"&gt;
+  Your browser does not support the audio element.
+&lt;/audio&gt;
+        </div>
+      </div>
+
+      <div class="tag-card">
+        <h3><code>&lt;picture&gt;</code> Tag</h3>
+        <p class="tag-description">
+          The <code>&lt;picture&gt;</code> element contains zero or more <code>&lt;source&gt;</code> elements 
+          and one <code>&lt;img&gt;</code> element to offer alternative versions of an image for different 
+          display/device scenarios.
+        </p>
+        <button class="tag-btn" onclick="toggleExample('picture-example')">Show Example</button>
+        <div id="picture-example" class="example-box">
+&lt;picture&gt;
+  &lt;source media="(min-width: 1200px)" srcset="large.jpg"&gt;
+  &lt;source media="(min-width: 768px)" srcset="medium.jpg"&gt;
+  &lt;img src="small.jpg" alt="Description"&gt;
+&lt;/picture&gt;
+        </div>
+      </div>
+    </div>
+
+    <!-- Add these inside your <section class="html-tutorial"> after the existing tag cards -->
+
+<div class="tag-card">
+  <h3><code>&lt;p&gt;</code> Tag</h3>
+  <p class="tag-description">
+    The <code>&lt;p&gt;</code> element defines a paragraph. Browsers automatically add 
+    some margin before and after each paragraph.
+  </p>
+  <button class="tag-btn" onclick="toggleExample('p-example')">Show Example</button>
+  <div id="p-example" class="example-box">
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;p&gt;This is another paragraph.&lt;/p&gt;
+  </div>
+</div>
+
+<div class="tag-card">
+  <h3><code>&lt;a&gt;</code> Tag</h3>
+  <p class="tag-description">
+    The <code>&lt;a&gt;</code> element creates hyperlinks to other web pages, files, 
+    locations within the same page, or any other URL.
+  </p>
+  <button class="tag-btn" onclick="toggleExample('a-example')">Show Example</button>
+  <div id="a-example" class="example-box">
+&lt;a href="https://example.com"&gt;Visit Example.com&lt;/a&gt;
+&lt;br&gt;
+&lt;a href="about.html"&gt;About Us&lt;/a&gt;
+&lt;br&gt;
+&lt;a href="#top"&gt;Back to Top&lt;/a&gt;
+  </div>
+</div>
+
+<div class="tag-card">
+  <h3><code>&lt;img&gt;</code> Tag</h3>
+  <p class="tag-description">
+    The <code>&lt;img&gt;</code> element embeds an image into the document. 
+    Always include the <code>alt</code> attribute for accessibility.
+  </p>
+  <button class="tag-btn" onclick="toggleExample('img-example')">Show Example</button>
+  <div id="img-example" class="example-box">
+&lt;img src="logo.png" alt="Company Logo" width="200"&gt;
+&lt;br&gt;
+&lt;img src="photo.jpg" alt="Beautiful landscape" style="width:100%"&gt;
+  </div>
+</div>
+
+<div class="tag-card">
+  <h3><code>&lt;ul&gt;</code> and <code>&lt;ol&gt;</code> Tags</h3>
+  <p class="tag-description">
+    <code>&lt;ul&gt;</code> creates an unordered (bulleted) list, while 
+    <code>&lt;ol&gt;</code> creates an ordered (numbered) list. Both use 
+    <code>&lt;li&gt;</code> for list items.
+  </p>
+  <button class="tag-btn" onclick="toggleExample('list-example')">Show Example</button>
+  <div id="list-example" class="example-box">
+&lt;!-- Unordered List --&gt;
+&lt;ul&gt;
+  &lt;li&gt;First item&lt;/li&gt;
+  &lt;li&gt;Second item&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Ordered List --&gt;
+&lt;ol&gt;
+  &lt;li&gt;Step one&lt;/li&gt;
+  &lt;li&gt;Step two&lt;/li&gt;
+&lt;/ol&gt;
+  </div>
+</div>
+
+<div class="tag-card">
+  <h3><code>&lt;button&gt;</code> Tag</h3>
+  <p class="tag-description">
+    The <code>&lt;button&gt;</code> element creates a clickable button that can 
+    trigger JavaScript functions or submit forms.
+  </p>
+  <button class="tag-btn" onclick="toggleExample('button-example')">Show Example</button>
+  <div id="button-example" class="example-box">
+&lt;button onclick="alert('Clicked!')"&gt;Click Me&lt;/button&gt;
+&lt;br&gt;
+&lt;button type="button" disabled&gt;Disabled Button&lt;/button&gt;
+&lt;br&gt;
+&lt;button style="background-color: #8FB3E2; color: white;"&gt;Styled Button&lt;/button&gt;
+  </div>
+</div>
+
+<div class="tag-card">
+  <h3><code>&lt;span&gt;</code> Tag</h3>
+  <p class="tag-description">
+    The <code>&lt;span&gt;</code> element is an inline container used to mark up 
+    part of a text or document. It's often used with CSS or JavaScript.
+  </p>
+  <button class="tag-btn" onclick="toggleExample('span-example')">Show Example</button>
+  <div id="span-example" class="example-box">
+&lt;p&gt;This is &lt;span style="color:red"&gt;red text&lt;/span&gt; inside a paragraph.&lt;/p&gt;
+&lt;p&gt;The word &lt;span class="highlight"&gt;important&lt;/span&gt; is highlighted.&lt;/p&gt;
+  </div>
+</div>
+
+<div class="tag-card">
+  <h3><code>&lt;br&gt;</code> Tag</h3>
+  <p class="tag-description">
+    The <code>&lt;br&gt;</code> element inserts a single line break. It's an empty 
+    tag (no closing tag needed).
+  </p>
+  <button class="tag-btn" onclick="toggleExample('br-example')">Show Example</button>
+  <div id="br-example" class="example-box">
+This text is before the line break.&lt;br&gt;
+This text is after the line break.
+  </div>
+</div>
+  </section>
+
+  <script>
+    function toggleExample(id) {
+      const exampleBox = document.getElementById(id);
+      exampleBox.classList.toggle('active');
+      
+      // Close other examples when opening a new one
+      document.querySelectorAll('.example-box').forEach(box => {
+        if (box.id !== id && box.classList.contains('active')) {
+          box.classList.remove('active');
+        }
+      });
+      
+      // Scroll to the example if it's being shown
+      if (exampleBox.classList.contains('active')) {
+        exampleBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+  </script>
+</body>
+</html>

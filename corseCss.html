@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tags Tutorial</title>
+
+      <link rel="stylesheet" href="course.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+     <a href="#" class="brand-logo">
+      <div class="logo">
+        <img src="LOGO.png" alt="My Website Logo">
+      </div>
+    </a>
+
+     <form class="search-form" role="search" aria-label="Site search">
+    <label for="site-search" class="visually-hidden">Search</label>
+    <div class="search-input-wrapper">
+      <input type="search" id="site-search" name="q" placeholder="Search…" aria-label="Search" />
+      <button type="submit" aria-label="Submit search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </div>
+  </form>
+
+    <nav class="navbar">
+      <ul>
+        <li><a href="home.html" >Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="course.html"class="active">Courses</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="library.html">Resourses</a></li>
+        <li><a href="stream.html" >Stream</a></li>
+     
+      </ul>
+    </nav>
+  </header>
+  <section class="tutorial">
+    <h2>Css Tags Tutorial</h2>
+    <p> CSS is the skin of a website, used to make HTML look attractive and organized. 
+    It uses properties like <code>color</code>, <code>font-size</code>, and <code>margin</code> to control 
+    how elements appear on the page. While HTML builds the structure, CSS brings it to life 
+    visually with colors, layouts, and designs. </p>
+
+    <br>
+    <div class="tag-section">
+      <div class="tag-card">
+        <h3><code>.color</code> Tag</h3>
+        <p class="tag-description">
+          The <code>color</code> property in CSS is used to change the text color of an element.
+It can take values like color names (red, blue), hexadecimal codes (#ff0000), RGB values (rgb(255,0,0)), or even HSL values (hsl(0, 100%, 50%)).
+        </p>
+        <button class="tag-btn" onclick="toggleExample('color-example')">Show Example</button>
+        <div id="color-example" class="example-box">
+p {
+  color: blue; /* This makes paragraph text blue */
+}
+
+        </div>
+      </div>
+       <div class="tag-card">
+      <h3><code> .font-size</code> Tag</h3>
+      <p class="tag-description">
+        The <code>.font-size</code> property sets how large or small the text appears.
+You can use units like pixels (px), relative sizes (em, rem), or percentages (%). </p>
+     
+      <button class="tag-btn" onclick="toggleExample('paragraph-example')">show Example</button>
+      <div id="paragraph-example" class="example-box">
+
+        p {
+  font-size: 20px; /* Text will be 20 pixels tall */
+}
+
+      </div>
+      </div>
+
+       <div class="tag-card">
+      <h3><code> font-family</code> Tag</h3>
+      <p class="tag-description">
+        The <code>font-family</code> property changes the typeface of the text.
+You can use common fonts like "Arial", "Times New Roman", or web fonts from Google Fonts. </p>
+     
+      <button class="tag-btn" onclick="toggleExample('font-example')">show Example</button>
+      <div id="font-example" class="example-box">
+
+  p {
+  font-family: Arial, sans-serif; /* Arial text with sans-serif fallback */
+}
+
+      </div>
+      </div>
+
+      
+       <div class="tag-card">
+      <h3><code> text-align</code> Tag</h3>
+      <p class="tag-description">
+        The <code>text-align</code> property sets the horizontal alignment of text inside its container.
+Common values: left, center, right, and justify. </p>
+     
+      <button class="tag-btn" onclick="toggleExample('text-example')">show Example</button>
+      <div id="text-example" class="example-box">
+
+p {
+  text-align: center; /* Centers the text */
+}
+      </div>
+      </div>
+
+      
+       <div class="tag-card">
+      <h3><code> font-weight</code> Tag</h3>
+      <p class="tag-description">
+        The <code>font-weight</code>   property controls how thick or bold the text is.
+Common values: normal, bold, or numbers like 100 to 900. </p>
+     
+      <button class="tag-btn" onclick="toggleExample('weight-example')">show Example</button>
+      <div id="weight-example" class="example-box">
+
+p {
+  font-weight: bold; /* Makes text bold */
+}
+      </div>
+      </div>
+
+
+        <div class="tag-card">
+      <h3><code> background-color</code> Tag</h3>
+      <p class="tag-description">
+        The <code>background-color</code> property sSets the background color of an element. </p>
+     
+      <button class="tag-btn" onclick="toggleExample('paragraph-example')">show Example</button>
+      <div id="paragraph-example" class="example-box">
+
+     div {
+  background-color: lightgray;
+}
+
+
+      </div>
+      </div>
+
+
+          <div class="tag-card">
+      <h3><code> margin</code> Tag</h3>
+      <p class="tag-description">
+        The <code>margin</code>  Creates space outside the element’s border. </p>
+     
+      <button class="tag-btn" onclick="toggleExample('paragraph-example')">show Example</button>
+      <div id="paragraph-example" class="example-box">
+
+    div {
+  margin: 20px;
+}
+      </div>
+      </div>
+
+      
+          <div class="tag-card">
+      <h3><code> padding</code> Tag</h3>
+      <p class="tag-description">
+        The <code>padding</code>  Creates space inside the element’s border (around content) </p>
+     
+      <button class="tag-btn" onclick="toggleExample('paragraph-example')">show Example</button>
+      <div id="paragraph-example" class="example-box">
+
+  div {
+  padding: 15px;
+}
+      </div>
+      </div>
+
+
+      
+  </section>
+  <script>
+    function toggleExample(id) {
+      const exampleBox = document.getElementById(id);
+      exampleBox.classList.toggle('active');
+      
+      // Close other examples when opening a new one
+      document.querySelectorAll('.example-box').forEach(box => {
+        if (box.id !== id && box.classList.contains('active')) {
+          box.classList.remove('active');
+        }
+      });
+      
+      // Scroll to the example if it's being shown
+      if (exampleBox.classList.contains('active')) {
+        exampleBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+  </script>
+    
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TZIO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --darkblue: #101828;
+      --blue: #8FB3E2;
+      --first: #F0F5FF;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to right, #d7e9f7, #eaf4fc);
+      color: #333;
+    }
+
+    header {
+      width: 100%;
+      background: var(--first);
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.8rem 1rem;
+      z-index: 1000;
+      box-shadow: var(--shadow);
+      box-sizing: border-box;
+    }
+
+    /* Logo styles */
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      margin-right: 1rem;
+    }
+
+    .brand-logo img {
+      height: 35px;
+      width: auto;
+    }
+
+    /* Navbar styles */
+    nav {
+      flex: 1;
+      overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      justify-content: flex-end;
+      gap: 0.8rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: var(--darkblue);
+      text-decoration: none;
+      padding: 0.4rem 0.8rem;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: var(--blue);
+    }
+
+    /* Search form */
+    .search-form {
+      flex: 0 0 auto;
+      margin: 0 0.8rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-form input {
+      border: none;
+      padding: 0.4rem 0.6rem;
+      font-size: 0.85rem;
+      min-width: 120px;
+      width: 120px;
+      outline: none;
+      background: transparent;
+    }
+
+    .search-input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      background: white;
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .search-input-wrapper button {
+      border: none;
+      background: none;
+      padding: 0.4rem 0.6rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Courses Section */
+    .course-section {
+      padding: 120px 20px 50px;
+      text-align: center;
+    }
+    .course-section h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: #3178c6;
+      animation: floatTitle 3s ease-in-out infinite;
+    }
+    .course-section p {
+      color: #555;
+      max-width: 600px;
+      margin: 0 auto 40px;
+      font-size: 16px;
+    }
+    @keyframes floatTitle {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+
+    .course-card {
+      background: white;
+      border-radius: 20px;
+      padding: 25px;
+      margin: 25px auto;
+      max-width: 650px;
+      text-align: center;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      transform: translateY(30px);
+      opacity: 0;
+      animation: fadeUp 0.6s ease forwards;
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+    }
+    .course-card:nth-child(2) { animation-delay: 0.2s; }
+    .course-card:nth-child(3) { animation-delay: 0.4s; }
+    .course-card:nth-child(4) { animation-delay: 0.6s; }
+    .course-card:nth-child(5) { animation-delay: 0.8s; }
+
+    .course-card:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 12px 35px rgba(90, 155, 212, 0.3);
+      background-color: #f7fbff;
+    }
+    .course-card:active {
+      transform: scale(0.97) translateY(0);
+      box-shadow: 0 5px 15px rgba(90, 155, 212, 0.2);
+    }
+
+    .course-card h3 {
+      margin-top: 0;
+      font-size: 26px;
+      color: #5a9bd4;
+    }
+    .course-card p {
+      margin: 10px 0;
+      font-size: 15px;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 900px) {
+      .search-form {
+        display: none;
+      }
+      nav ul {
+        gap: 0.5rem;
+      }
+      nav ul li a {
+        padding: 0.4rem 0.6rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-wrap: wrap;
+        padding: 0.5rem;
+      }
+      .brand-logo {
+        margin-right: 0.5rem;
+      }
+      .brand-logo img {
+        height: 30px;
+      }
+      nav {
+        order: 3;
+        width: 100%;
+        margin-top: 0.5rem;
+      }
+      nav ul {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="#" class="brand-logo"><img src="LOGO.png" alt="TZIO Logo"></a>
+   
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="choose.html" class="active">Courses</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+        <li><a href="library.html">Resourses</a></li>
+        <li><a href="stream.html">Stream</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Courses -->
+  <section class="course-section">
+    <h2>Our Magical Courses</h2>
+    <p>Learn from scratch with fun, practical lessons that take you from beginner to wizard level!</p>
+    <p>****** please choose your course *****</p>
+
+    <div class="course-card">
+      <a href="course.html" style="text-decoration: none; color: inherit;">
+        <h3>HTML</h3>
+        <p>Unlock the power of the web—HTML is your gateway to creating anything!</p>
+      </a>
+    </div>
+
+    <div class="course-card">
+      <a href="corseCss.html" style="text-decoration: none; color: inherit;">
+        <h3>CSS</h3>
+        <p>Where websites go from meh to WOW! Style it, slay it, own it!</p>
+      </a>
+    </div>
+
+    <div class="course-card">
+      <a href="coursejs.html" style="text-decoration: none; color: inherit;">
+        <h3>JavaScript</h3>
+        <p>The superpower that makes websites ALIVE!</p>
+      </a>
+    </div>
+
+    <div class="course-card">
+      <a href="courseReact.html" style="text-decoration: none; color: inherit;">
+        <h3>React</h3>
+        <p>Where UIs go from static to stellar! Build it, hook it, own it!</p>
+      </a>
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Micro Self Learning</title>
+
+  <!-- Fonts & Icons -->
+   
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2d9d5a64f.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+  <header class="header">
+    <a href="#" class="brand-logo">
+      <div class="logo">
+        <img src="LOGO.png" alt="My Website Logo">
+      </div>
+    </a>
+
+    <form class="search-form" role="search" aria-label="Site search">
+      <label for="site-search" class="visually-hidden">Search</label>
+      <div class="search-input-wrapper">
+        <input type="search" id="site-search" name="q" placeholder="Search…" aria-label="Search" />
+        <button type="submit" aria-label="Submit search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+    </form>
+
+    <nav class="navbar">
+      <ul>
+        <li><a href="home.html" >Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="choose.html">Courses</a></li>
+        <li><a href="contact.html" class="active">Contact Us</a></li>
+        <li><a href="library.html">Resources</a></li>
+        <li><a href="stream.html">Stream</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <span class="big-circle"></span>
+    <div class="form">
+        <div class="contact-info">
+<h3 class="title">Let's get in touch</h3>
+<p class="text">We’d love to hear from you! Whether you have a question, feedback, or just want to say hello, our team is always ready to help. Simply fill out the form below and we’ll get back to you as soon as possible. Your thoughts and ideas matter to us, and we’re here to make sure your experience is the best it can be.</p>
+        <div class="info">
+            <div class="information">
+                <img src="location.png" class="icon">
+                <p>Setif University Farhat Abas</p>
+            </div>
+        </div>
+        <div class="social-media">
+            <p>Connect with us :</p>
+            <div class="social-icons">
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+
+</div>
+            <div class="contact-form">
+                <div class="circle one"></div>
+                <div class="circle two"></div>
+                <form action="contact.html" id="contactForm">
+                <h3 class="title">Contact Us</h3>
+                <div class="input-container ">
+                    <input type="text" name="name" class="input">
+                    <label for="">Username</label>
+                    <span>Username</span>
+                </div>
+                 <div class="input-container">
+                    <input type="email" name="email" class="input">
+                    <label for="">Email</label>
+                    <span>Email</span>
+                </div>
+                 <div class="input-container">
+                    <input type="tel" name="phone" class="input">
+                    <label for="">Phone</label>
+                    <span>Phone</span>
+                </div>
+                 <div class="input-container textarea ">
+                    <textarea name="message" class="input"></textarea>
+                    <label for="">Message</label>
+                    <span>Message</span>
+                </div>
+                <input type="submit" value="Send" class="btn" />
+</form>
+<p id="formStatus"></p>
+            </div>
+        
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

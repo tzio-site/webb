@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tags Tutorial</title>
+
+      <link rel="stylesheet" href="course.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+      <header class="header">
+     <a href="#" class="brand-logo">
+      <div class="logo">
+        <img src="LOGO.png" alt="My Website Logo">
+      </div>
+    </a>
+
+     <form class="search-form" role="search" aria-label="Site search">
+    <label for="site-search" class="visually-hidden">Search</label>
+    <div class="search-input-wrapper">
+      <input type="search" id="site-search" name="q" placeholder="Search…" aria-label="Search" />
+      <button type="submit" aria-label="Submit search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </div>
+  </form>
+
+    <nav class="navbar">
+      <ul>
+          <li><a href="home.html" >Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="course.html"class="active">Courses</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="library.html">Resourses</a></li>
+        <li><a href="stream.html" >Stream</a></li>
+        </ul>
+    </nav>
+  </header>
+  <section class="tutorial">
+    <h2>JavaScript  Tutorial</h2>
+    <p> JS is the brain of a website, used to make HTML and CSS interactive and dynamic.
+It uses features like functions, events, and DOM manipulation to respond to user actions and update the page in real time. </p>
+
+    <br>
+    <div class="tag-section">
+      <div class="tag-card">
+        <h3><code>let / const</code> </h3>
+        <p class="tag-description">
+         Purpose: Variables store information that you can use and change later.
+         <br>
+Difference:
+let → value can change
+<br>
+const → value cannot change after setting
+        </p>
+        <button class="tag-btn" onclick="toggleExample('let-example')">Show Example</button>
+        <div id="let-example" class="example-box">
+let name = "Ali";
+name = "Omar";  // ✅ allowed
+
+const PI = 3.14;
+PI = 3.15;      // ❌ error
+
+        </div>
+      </div>
+
+
+       <div class="tag-card">
+      <h3><code> alert()</code> </h3>
+      <p class="tag-description">
+        Purpose: Shows a small browser alert box with your message.
+<br>
+When to use: For quick notices, but not good for serious UI because it blocks the page until closed. </p>
+     
+      <button class="tag-btn" onclick="toggleExample('alert-example')">show Example</button>
+      <div id="alert-example" class="example-box">
+
+   alert("Welcome to my website!");
+
+
+      </div>
+      </div>
+
+       <div class="tag-card">
+      <h3><code> console.log()</code> </h3>
+      <p class="tag-description">
+        Purpose: Displays messages in the browser console (press F12 → Console tab).
+<br>
+Why use it: Helps you check if your code is working or see values while testing. </p>
+     
+      <button class="tag-btn" onclick="toggleExample('log-example')">show Example</button>
+      <div id="log-example" class="example-box">
+
+  console.log("Page loaded");
+
+
+      </div>
+      </div>
+
+      
+       <div class="tag-card">
+      <h3><code> document.getElementById()</code> </h3>
+      <p class="tag-description">
+        Purpose: Lets you access an element in HTML so you can change it.
+<br>
+Use with: .innerHTML to change text, .style to change CSS, etc.. </p>
+     
+      <button class="tag-btn" onclick="toggleExample('text-example')">show Example</button>
+      <div id="text-example" class="example-box">
+document.getElementById("title").innerHTML = "New Title";
+
+      </div>
+      </div>
+
+      
+       <div class="tag-card">
+      <h3><code> addEventListener()</code></h3>
+      <p class="tag-description">
+        Purpose: Makes your site respond when something happens (click, hover, typing, etc.).
+<br>
+Why it’s better than HTML onclick: Keeps HTML and JS separate.
+ </p>
+     
+      <button class="tag-btn" onclick="toggleExample('weight-example')">show Example</button>
+      <div id="weight-example" class="example-box">
+
+document.getElementById("btn").addEventListener("click", function() {
+  alert("Button clicked!");
+});
+
+      </div>
+      </div>
+
+
+        <div class="tag-card">
+      <h3><code> if...else</code> Tag</h3>
+      <p class="tag-description">
+       Purpose: Runs different code depending on a condition (true/false).
+<br>
+Example: Check age to allow entry.
+
+ </p>
+     
+      <button class="tag-btn" onclick="toggleExample('if-example')">show Example</button>
+      <div id="if-example" class="example-box">
+let age = 16;
+if (age >= 18) {
+  console.log("Allowed");
+} else {
+  console.log("Not allowed");
+}
+
+      </div>
+      </div>
+
+
+          <div class="tag-card">
+      <h3><code> for loop </code> </h3>
+      <p class="tag-description">
+       Purpose: Runs code multiple times without writing it repeatedly. </p>
+     
+      <button class="tag-btn" onclick="toggleExample('for-example')">show Example</button>
+      <div id="for-example" class="example-box">
+for (let i = 1; i <= 3; i++) {
+  console.log("Number: " + i);
+}
+
+      </div>
+      </div>
+
+      
+          <div class="tag-card">
+      <h3><code> function</code> </h3>
+      <p class="tag-description">
+        Purpose: Groups code together so you can call it anytime without rewriting.
+
+ </p>
+     
+      <button class="tag-btn" onclick="toggleExample('function-example')">show Example</button>
+      <div id="function-example" class="example-box">
+function greet(user) {
+  console.log("Hello, " + user);
+}
+greet("Sara");
+greet("Omar");
+
+      </div>
+      </div>
+
+
+      
+  </section>
+  <script>
+    function toggleExample(id) {
+      const exampleBox = document.getElementById(id);
+      exampleBox.classList.toggle('active');
+      
+      // Close other examples when opening a new one
+      document.querySelectorAll('.example-box').forEach(box => {
+        if (box.id !== id && box.classList.contains('active')) {
+          box.classList.remove('active');
+        }
+      });
+      
+      // Scroll to the example if it's being shown
+      if (exampleBox.classList.contains('active')) {
+        exampleBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+  </script>
+    
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Tags Tutorial</title>
+  <link rel="stylesheet" href="course.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+     <a href="#" class="brand-logo">
+      <div class="logo">
+        <img src="LOGO.png" alt="My Website Logo">
+      </div>
+    </a>
+
+     <form class="search-form" role="search" aria-label="Site search">
+    <label for="site-search" class="visually-hidden">Search</label>
+    <div class="search-input-wrapper">
+      <input type="search" id="site-search" name="q" placeholder="Search…" aria-label="Search" />
+      <button type="submit" aria-label="Submit search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </div>
+  </form>
+
+    <nav class="navbar">
+      <ul>
+        <li><a href="home.html" >Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="course.html"class="active">Courses</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="library.html">Resourses</a></li>
+        <li><a href="stream.html" >Stream</a></li>
+      
+      </ul>
+    </nav>
+  </header>
+
+  <section class="tutorial">
+    <h2>React Tutorial</h2>
+    
+    <p> React provides a component-based approach for building user interfaces.
+  Below are some essential React concepts with examples:</p>
+    
+    <div class="tag-section">
+      <div class="tag-card">
+        <h3><code> Components (Function Components)</code> </h3>
+        <p class="tag-description">
+         What it is: The building blocks of React apps. A component is just a JavaScript function that returns JSX.
+        </p>
+        <button class="tag-btn" onclick="toggleExample('component-example')">Show Example</button>
+        <div id="component-example" class="example-box">
+function Welcome() {
+  return &lt;h1&gt;Hello, React!&lt;/h1&gt;;
+}
+
+        </div>
+      </div>
+      
+      <div class="tag-card">
+        <h3><code>JSX (JavaScript XML)</code> </h3>
+        <p class="tag-description">
+        What it is: A syntax that looks like HTML but works inside JavaScript, allowing you to write UI elements.
+        </p>
+        <button class="tag-btn" onclick="toggleExample('link-example')">Show Example</button>
+        <div id="link-example" class="example-box">
+const element = &lt;p&gt;This is JSX &lt;/p&gt;;
+
+        </div>
+      </div>
+      
+      <div class="tag-card">
+        <h3><code> Props (Properties)</code> </h3>
+        <p class="tag-description">
+        What it is: A way to pass data from a parent component to a child component.
+        </p>
+        <button class="tag-btn" onclick="toggleExample('div-example')">Show Example</button>
+        <div id="div-example" class="example-box">
+function Greeting({ name }) {
+  return &lt;h1&gt;Hello, {name}!&gt;/h1&gt;;
+}
+
+// Usage
+&lt;Greeting name="Hou" /&gt;
+
+        </div>
+      </div>
+    </div>
+
+      <div class="tag-card">
+        <h3><code>State</code></h3>
+        <p class="tag-description">
+         What it is: React’s way to store data inside a component that can change over time.
+        </p>
+        <button class="tag-btn" onclick="toggleExample('section-example')">Show Example</button>
+        <div id="section-example" class="example-box">
+
+import { useState } from "react";
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    &lt;div&gt;
+      &lt;p>Count: {count}&lt;/p&gt;
+      &lt;button onClick={() => setCount(count + 1)}&gt;Increase&lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+
+        </div>
+      </div>
+
+      <div class="tag-card">
+        <h3><code>Event Handling</code></h3>
+        <p class="tag-description">
+         What it is: React handles events like <code>onClick</code> similar to HTML but uses camelCase.
+        </p>
+        <button class="tag-btn" onclick="toggleExample('article-example')">Show Example</button>
+        <div id="article-example" class="example-box">
+function Button() {
+  function handleClick() {
+    alert("Button clicked!");
+  }
+
+  return &lt;button onClick={handleClick}&gt;Click Me&lt;/button&gt;;
+}
+
+        </div>
+      </div>
+
+      <div class="tag-card">
+        <h3><code>Conditional Rendering</code></h3>
+        <p class="tag-description">
+         What it is: Show elements based on a condition.
+        </p>
+        <button class="tag-btn" onclick="toggleExample('nav-example')">Show Example</button>
+        <div id="nav-example" class="example-box">
+function LoginStatus({ isLoggedIn }) {
+  return &lt;p&gt;{isLoggedIn ? "Welcome back!" : "Please log in."}&lt;/p&gt;;
+}
+
+        </div>
+      </div>
+
+      <div class="tag-card">
+        <h3><code>Lists and Keys</code></h3>
+        <p class="tag-description">
+         What it is: Render multiple elements using <code>.map()</code>  and give each a unique <code>key</code>.
+
+        </p>
+        <button class="tag-btn" onclick="toggleExample('form-example')">Show Example</button>
+        <div id="form-example" class="example-box">
+function TodoList() {
+  const todos = ["Learn React", "Build Projects", "Get a Job"];
+
+  return (
+    &lt;ul&gt;
+      {todos.map((todo, index) => (
+        &lt;li key={index}&gt;{todo}&lt;/li&gt;
+      ))}
+    &lt;/ul&gt;
+  );
+}
+
+        </div>
+      </div>
+
+      <div class="tag-card">
+        <h3><code>useEffect Hook</code> </h3>
+        <p class="tag-description">
+          What it is: Run code when a component renders or when certain data changes.
+        </p>
+        <button class="tag-btn" onclick="toggleExample('table-example')">Show Example</button>
+        <div id="table-example" class="example-box">
+import { useState, useEffect } from "react";
+
+function Timer() {
+  const [seconds, setSeconds] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => setSeconds(s => s + 1), 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  return &lt;p&gt;Time: {seconds}s&lt;/p&gt;;
+}
+
+        </div>
+      </div>
+
+      <div class="tag-card">
+        <h3><code>Styling in React</code></h3>
+        <p class="tag-description">
+         What it is: Add CSS directly or use <code>style</code> objects.
+        <button class="tag-btn" onclick="toggleExample('video-example')">Show Example</button>
+        <div id="video-example" class="example-box">
+function StyledText() {
+  const style = { color: "blue", fontSize: "20px" };
+  return &lt;p style={style}&gt;Styled with inline CSS&lt;/p&gt;;
+}
+
+        </div>
+      </div>
+
+      <div class="tag-card">
+        <h3><code>Component Composition</code> </h3>
+        <p class="tag-description">
+          What it is: Combine components together.
+        </p>
+        <button class="tag-btn" onclick="toggleExample('audio-example')">Show Example</button>
+        <div id="audio-example" class="example-box">
+&lt;audio controls&gt;
+function Header() {
+  return &lt;h1&gt;My Website&lt;/h1&gt;;
+}
+
+function App() {
+  return (
+    &lt;div&gt;
+      &lt;Header /&gt;
+      &lt;p&gt;Welcome to my site!&lt;/p&gt;
+    &lt;/div&gt;
+  );
+}
+
+        </div>
+      </div>
+
+      
+    </div>
+
+   
+  </section>
+
+  <script>
+    function toggleExample(id) {
+      const exampleBox = document.getElementById(id);
+      exampleBox.classList.toggle('active');
+      
+      // Close other examples when opening a new one
+      document.querySelectorAll('.example-box').forEach(box => {
+        if (box.id !== id && box.classList.contains('active')) {
+          box.classList.remove('active');
+        }
+      });
+      
+      // Scroll to the example if it's being shown
+      if (exampleBox.classList.contains('active')) {
+        exampleBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+  </script>
+</body>
+</html>
